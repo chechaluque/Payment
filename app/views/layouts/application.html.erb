@@ -7,7 +7,7 @@
     <title>Your Title</title>
 
     <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300,800' >
-    
+
     <title>Payment</title>
     <%= csrf_meta_tags %>
 
@@ -16,6 +16,15 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div id="content" class="container">
+        <header id="content-header">
+            <div id="price-container">
+              <span class="glyphicon glyphicon-tag"></span><span class="price">$9.99</span>
+            </div>
+          <%= image_tag('header-image.jpg', id:"content-head-img", alt: "Payment") %>
+        </header>
+        <%= yield %>
+    </div>
+
   </body>
 </html>
